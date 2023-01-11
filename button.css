@@ -1,0 +1,317 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* color-palette */
+    --primary-color-blue: #49dded;
+    --primary-color-green: #66fd66;
+    --primary-color-pink: #ffccdb;
+    --primary-color-yellow: #ffe121;
+    --secondary-color-blue: #0033db;
+    --secondary-color-megenta: #e25bdb;
+    --secondary-color-darkgreen: #18454e;
+    --secondary-color-yellow: #ffe000;
+    /* font-size */
+    --fs-p: clamp(18px, 10vw, 22px);
+    --fs-a: 20px;
+    --fs-h1: 60px;
+    --fs-h2: 52px;
+    --fs-h3: 46px;
+    --fs-h4: 38px;
+    --fs-h5: 30px;
+    --fs-h6: 22px;
+    --fs-caption: 14px;
+    --fs-h1Title: clamp(52px, 8vw, 90px);
+    /* font-weight*/
+    --fw-p: 500;
+    --fw-a: 800;
+    --fw-h1: 800;
+    --fw-h2: 700;
+    --fw-h3: 700;
+    --fw-h4: 600;
+    --fw-h5: 500;
+    --fw-h6: 800;
+    --fw-caption: 500;
+}
+
+@media (max-width: 414px) {
+    .fin-btn .wave-button-product.product-last-one {
+        padding: 10px 20px;
+    }
+}
+
+h6,
+a,
+p,
+caption {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+/* button */
+.wave-button {
+    position: relative;
+    display: block;
+    padding: 10px 30px;
+    border: 5px solid #000;
+    text-transform: capitalize;
+    font-size: var(--fs-a);
+    font-weight: var(--fw-a);
+    line-height: var(--fs-a);
+    letter-spacing: 0.25em;
+    color: #000;
+    background-color: #fff;
+    border-radius: 50px;
+    text-decoration: none;
+    overflow: hidden;
+    transition: 1s;
+    text-align: center;
+}
+
+.bottomFade {
+    opacity: 0;
+    animation: fadeToBottom 1s ease-out 6.8s forwards;
+}
+
+.wave-button span {
+    position: relative;
+    word-wrap: none;
+    word-break: keep-all;
+    white-space: nowrap;
+    z-index: 1;
+    transition: 1s;
+}
+
+.wave-button:hover span {
+    color: var(--secondary-color-blue);
+}
+
+.nav-button:hover span {
+    color: var(--secondary-color-yellow);
+}
+
+.wave-button:hover {
+    transform: scale(1.1) translateX(10px);
+}
+
+.wave-button .wave {
+    position: absolute;
+    top: calc(100% + 22px);
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background: var(--secondary-color-yellow);
+    transition: 1s;
+}
+
+.wave-button:hover .wave {
+    top: 0;
+}
+
+.wave-button .wave:before {
+    content: '';
+    position: absolute;
+    top: -22px;
+    left: 0;
+    width: 100%;
+    height: 22px;
+    background: url(./src/wave.svg);
+    animation: animate 0.3s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        background-position-x: 0;
+    }
+
+    100% {
+        background-position-x: 118px;
+    }
+}
+
+.wave-button-register {
+    position: relative;
+    display: block;
+    padding: 10px 40px;
+    border: 5px solid #000;
+    text-transform: capitalize;
+    font-size: var(--fs-a);
+    font-weight: var(--fw-a);
+    line-height: var(--fs-a);
+    letter-spacing: 0.25em;
+    color: #fff;
+    background-color: var(--secondary-color-blue);
+    border-radius: 50px;
+    text-decoration: none;
+    overflow: hidden;
+    transition: 1s;
+}
+
+
+.wave-button .wave-reset-password {
+    position: absolute;
+    top: calc(100% + 22px);
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background: var(--secondary-color-megenta);
+    transition: 1s;
+}
+
+.wave-button .wave-reset-password:before {
+    content: '';
+    position: absolute;
+    top: -22px;
+    left: 0;
+    width: 100%;
+    height: 22px;
+    background: url(./src/wave-megenta.svg);
+    animation: animate 0.3s linear infinite;
+}
+
+.wave-button.nav-button {
+    position: relative;
+    display: block;
+    padding: 5px 30px;
+    border: 5px solid #000;
+    text-transform: capitalize;
+    font-size: var(--fs-a);
+    font-weight: var(--fw-a);
+    line-height: var(--fs-a);
+    letter-spacing: 0.25em;
+    color: #fff;
+    background-color: var(--secondary-color-blue);
+    border-radius: 50px;
+    text-decoration: none;
+    overflow: hidden;
+    transition: 1s;
+    text-align: center;
+}
+
+
+
+.nav-button:hover {
+    transform: scale(1.1);
+}
+
+.wave-button .nav-wave {
+    position: absolute;
+    top: calc(100% + 22px);
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background: var(--secondary-color-megenta);
+    transition: 1s;
+}
+
+.wave-button .nav-wave:before {
+    content: '';
+    position: absolute;
+    top: -22px;
+    left: 0;
+    width: 100%;
+    height: 22px;
+    background: url(./src/wave-megenta.svg);
+    animation: animate 0.3s linear infinite;
+}
+
+/* Button end */
+
+/* button */
+.wave-button-product {
+    position: relative;
+    display: block;
+    padding: 10px 30px;
+    border: 5px solid #000;
+    text-transform: capitalize;
+    font-size: var(--fs-a);
+    font-weight: var(--fw-a);
+    line-height: var(--fs-a);
+    letter-spacing: 0.25em;
+    color: #000;
+    background-color: #fff;
+    border-radius: 50px;
+    text-decoration: none;
+    overflow: hidden;
+    transition: 1s;
+    text-align: center;
+}
+
+.wave-button-product.product-last-one {
+    position: relative;
+    display: block;
+    padding: 20px 80px;
+    border: 5px solid #000;
+    text-align: center;
+    text-transform: capitalize;
+    font-size: var(--fs-a);
+    font-weight: var(--fw-a);
+    line-height: var(--fs-a);
+    letter-spacing: 0.25em;
+    color: #fff;
+    background-color: var(--secondary-color-blue);
+    border-radius: 50px;
+    text-decoration: none;
+    overflow: hidden;
+    transition: 1s;
+}
+
+.bottomFade {
+    opacity: 0;
+    animation: fadeToBottom 1s ease-out 6.8s forwards;
+}
+
+.wave-button-product span {
+    position: relative;
+    word-wrap: none;
+    word-break: keep-all;
+    white-space: nowrap;
+    z-index: 1;
+    transition: 1s;
+}
+
+.wave-button-product:hover span {
+    color: var(--secondary-color-blue);
+}
+
+.wave-button-product:hover {
+    transform: scale(1.1);
+}
+
+.wave-button-product .wave {
+    position: absolute;
+    top: calc(100% + 22px);
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background: var(--secondary-color-yellow);
+    transition: 1s;
+}
+
+.wave-button-product:hover .wave {
+    top: 0;
+}
+
+.wave-button-product .wave:before {
+    content: '';
+    position: absolute;
+    top: -22px;
+    left: 0;
+    width: 100%;
+    height: 22px;
+    background: url(./src/wave.svg);
+    animation: animate 0.3s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        background-position-x: 0;
+    }
+
+    100% {
+        background-position-x: 118px;
+    }
+}

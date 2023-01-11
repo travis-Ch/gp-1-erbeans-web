@@ -1,0 +1,242 @@
+/* font */
+*,
+*::before,
+*::after {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* color-palette */
+  --primary-color-blue: #49dded;
+  --primary-color-green: #66fd66;
+  --primary-color-pink: #ffccdb;
+  --primary-color-yellow: #ffe121;
+  --secondary-color-blue: #0033db;
+  --secondary-color-megenta: #e25bdb;
+  --secondary-color-darkgreen: #18454e;
+  --secondary-color-yellow: #ffe000;
+  /* font-size */
+  --fs-p: clamp(16px, 6vw, 20px);
+  --fs-a: 20px;
+  --fs-h1: 60px;
+  --fs-h2: clamp(30px, 10vw, 52px);
+  --fs-h3: 46px;
+  --fs-h4: 38px;
+  --fs-h5: 30px;
+  --fs-h6: 22px;
+  --fs-caption: 14px;
+  --fs-h1Title: clamp(52px, 8vw, 90px);
+  /* font-weight*/
+  --fw-p: 500;
+  --fw-a: 800;
+  --fw-h1: 800;
+  --fw-h2: 700;
+  --fw-h3: 700;
+  --fw-h4: 600;
+  --fw-h5: 500;
+  --fw-h6: 800;
+  --fw-caption: 500;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Kanit', sans-serif;
+}
+
+h6,
+a,
+p,
+caption,label{
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+input,button,ol{
+  font-family: 'M PLUS Rounded 1c', sans-serif !important;
+}
+
+/* font end */
+
+body{
+  background-image: url("./src/checkout-bg.png");
+  padding:20px 0;
+  margin: 0 auto;
+}
+
+/* navbar css */
+.navbar {
+  opacity: 1;
+  background-color: var(--secondary-color-yellow);
+  border: solid #000;
+  border-width: 5px 0 5px 0;
+  
+}
+
+
+.nav-item a {
+  font-family: 'M PLUS Rounded 1c', sans-serif !important;
+  font-size: var(--fs-a) !important;
+  font-weight: var(--fw-a) !important;
+  line-height: var(--fs-a) !important;
+  color: #000 !important;
+}
+
+
+.nav-item a:hover {
+  color: var(--secondary-color-blue) !important;
+  border-bottom: 5px solid var(--secondary-color-blue);
+  border-bottom-style: groove;
+  transition: 0.5s;
+}
+
+/* navbar css end */
+
+.rowcontainer{
+  padding:20px;
+  flex-wrap: wrap;
+  width:100%;
+  margin:0 auto;
+  margin-top:80px !important;
+  /* height:100vh; */
+  background-color: white;
+  }
+
+.container{
+  background-color: white;
+}
+#col8{
+  width: 60%;
+  flex-wrap: wrap;
+  flex-direction: column;  
+}
+#col4{
+  width: 40%;
+  flex-wrap: wrap;
+  flex-direction: column;
+  border:2px solid #939393;
+}
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .row {
+    margin-bottom: 20px;
+  }
+}
+
+.d-flex {
+  display: flex !important;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-direction: row;
+}
+
+.line{
+    width: 420px;
+    height: 32px;
+    margin-top:30px;
+    margin-bottom: 30px;
+    background: #939393;
+    border-radius: 3px;
+    flex-wrap: wrap;
+}
+
+.email input {
+        width: 15px;
+          height: 15px;
+          padding: 0;
+          margin: 0;
+          vertical-align: bottom;
+          position: relative;
+          top: -1px;
+}
+.email input{
+  width:70%;
+  padding:10px;
+}
+.revcheck{
+  display: block;
+  width:70%;
+  align-items: flex-start;
+
+}
+.value label{
+border: 1px solid #5C5C5C;
+margin:5px;
+width:70%;
+border-radius: 3px;
+}
+
+.value{
+      display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: flex-end;
+}
+
+.nameclassroom input{
+  width:70%;
+}
+
+.confirmmsg{
+  font-size: 2rem;
+}
+.square{
+  width:30px;
+  height:30px;
+  background-color: #939393;
+  border-radius:3px;
+}
+
+
+.nameclassroom {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.item1{
+  display: flex !important;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.item2{
+  display: flex !important;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.checkbtn{
+  display: flex;
+  margin:0 auto;
+}
+
+/* footer */
+.footer-container {
+  background-color: var(--secondary-color-blue);
+  border: 5px solid #000;
+
+}
+
+.footer-container h6 {
+  color: var(--secondary-color-megenta);
+  font-weight: var(--fw-h6);
+  font-size: var(--fs-h6);
+}
+
+
+.socials a {
+  color: #fff;
+  padding: 0.75rem 0;
+}
